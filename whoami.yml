@@ -8,4 +8,4 @@
         - { element: 'FQDN', value: "{{ ansible_fqdn }}" }
         - { element: 'IpV4', value: "{{ ansible_all_ipv4_addresses }}" }
         - { element: 'Node Name', value: "{{ ansible_nodename }}" }
-        - { element: 'Distribution', value: "{{ ansible_ansible_distribution }}" }
+        - { element: 'Distribution', value: "{{ ansible_distribution }}" }
