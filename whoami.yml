@@ -1,0 +1,11 @@
+- name: Who-Am-I Sample
+  hosts: all
+  tasks:
+    - name: Show Who am I
+      debug:
+        msg: "{{ item.element }}: {{ item.value }}"
+      with_list:
+        - { element: 'FQDN', value: "{{ ansible_fqdn }}" }
+        - { element: 'IpV4', value: "{{ ansible_all_ipv4_addresses }}" }
+        - { element: 'Node Name', value: "{{ ansible_nodename }}" }
+        - { element: 'Distribution', value: "{{ ansible_ansible_distribution }}" }
